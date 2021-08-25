@@ -1,20 +1,39 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      My travel
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  
+  <ion-text color="black">
+    <h1>Hello, user</h1>
+    <h1>Where do you want to go?</h1>
+  </ion-text>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-item>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-icon name="globe"></ion-icon>
+        </ion-col>
+        <ion-col>
+          <i-input placeholder="Search destination">Search destination</i-input>
+        </ion-col>
+        <ion-col>
+          <ion-button (click)="onClick()">
+            <ion-icon name="arrow-forward"></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+
+  <ion-text color="black">
+    <h2>Daily Scenary</h2>
+    <span>Updated</span>
+  </ion-text>
+
 </ion-content>
