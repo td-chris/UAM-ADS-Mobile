@@ -1,16 +1,51 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Olá, {{ pessoa ? {{ texto }}essoa.nome + ' ' + pessoa.sobrenome : visitante }}
+      <ion-text color="black">
+        Olá, {{ pessoa ? pessoa.nome + ' ' + pessoa.sobrenome : visitante }}
+      </ion-text>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   
-  <div class="container">
-    <ion-text color="primary">
-      <h1>{{ texto }}</h1>
+  <ion-text color="primary" class="ion-text-center">
+    <h1>{{ texto }}</h1>
+  </ion-text>
+  
+  <ion-card>
+    <ion-card-title>
+      <ion-text color="primary" class="ion-text-center">
+        <h2>This is a card header</h2>
+      </ion-text>
+    </ion-card-title>
+    <ion-card-content>
+      This is a card content
+    </ion-card-content>
+
+  </ion-card>
+
+  <ion-card>
+    <ion-text color="primary" class="ion-text-center">
+      <h1>O valor atual é :</h1>
+      <h2>{{ ValorNumerico }}</h2>
     </ion-text>
-  </div>
+
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col size="6">
+          <ion-button color="primary" (click)="aumentar()" expand="block" fill="solid" shape="round">
+            Aumentar
+          </ion-button>
+        </ion-col>
+        <ion-col size="6">
+          <ion-button color="danger" (click)="diminuir()" expand="block" fill="solid" shape="round">
+            Diminuir
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
 </ion-content>

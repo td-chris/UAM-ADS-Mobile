@@ -26,5 +26,24 @@ export class HomePage {
       nome : 'ze',
       sobrenome : 'netto'
     }
-  
+
+    // Propriedade que armazena uma string para alterar cor
+    public cot = '';
+
+    // Propriedade que utilizamos para calculos
+    public ValorNumerico = 0;
+    
+    // Método para incrementar
+    aumentar(): void {
+      if (this.ValorNumerico <= 9){
+        this.ValorNumerico ++;
+      }
+    }
+    
+    // Método para incrementar
+    diminuir(): void {
+      if (this.ValorNumerico > 0){
+        this.ValorNumerico --;
+      }
+    }
 }
