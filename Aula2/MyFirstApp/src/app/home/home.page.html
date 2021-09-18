@@ -1,20 +1,56 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      <ion-text color="black">
+        Olá, {{ pessoa ? pessoa.nome + ' ' + pessoa.sobrenome : visitante }}
+      </ion-text>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  
+  <ion-text color="primary" class="ion-text-center">
+    <h1>{{ texto }}</h1>
+  </ion-text>
+  
+  <ion-card>
+    <ion-card-title>
+      <ion-text color="primary" class="ion-text-center">
+        <h2>This is a card header</h2>
+      </ion-text>
+    </ion-card-title>
+    <ion-card-content>
+      This is a card content
+    </ion-card-content>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  </ion-card>
+
+  <ion-card>
+    <ion-text color="primary" class="ion-text-center">
+      <h1>O valor atual é :</h1>
+      <h2>{{ ValorNumerico }}</h2>
+    </ion-text>
+
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col size="6">
+          <ion-button color="primary" (click)="aumentar()" expand="block" fill="solid" shape="round">
+            Aumentar
+          </ion-button>
+        </ion-col>
+        <ion-col size="6">
+          <ion-button color="danger" (click)="diminuir()" expand="block" fill="solid" shape="round">
+            Diminuir
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-button color="dark" (click)="resetar()" expand="block" fill="solid" shape="round">
+      Resetar
+    </ion-button>
+
+  </ion-card>
+
 </ion-content>
