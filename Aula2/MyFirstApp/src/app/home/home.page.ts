@@ -46,4 +46,11 @@ export class HomePage {
         this.ValorNumerico --;
       }
     }
+
+    // Método para resetar
+    resetar(): void {
+      if (this.ValorNumerico > 0){
+        this.ValorNumerico = 0;
+      }
+    }
 }
